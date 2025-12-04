@@ -1,0 +1,24 @@
+variable "aws_region" {
+  type    = string
+  default = "us-east-1"
+}
+
+variable "aws_access_key" {
+  type    = string
+  default = "test"
+}
+
+variable "aws_secret_key" {
+  type    = string
+  default = "test"
+}
+
+variable "localstack_url" {
+  description = "LocalStack service endpoint URL."
+  type        = string
+}
+
+variable "main_queue_name" {
+  description = "SQS main queue name."
+  type        = string
+}
