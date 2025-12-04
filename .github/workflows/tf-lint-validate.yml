@@ -17,6 +17,6 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Run Terraform lint and validate
-        run: make tf-lint
+        run: make tf-lint-check
         env:
           TFLLOCAL: terraform

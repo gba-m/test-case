@@ -34,5 +34,9 @@ tf-local-up:
 
 tf-lint:
 	$(MAKE) tf-local-init
+	cd $(LOCALSTACK_TF_DIR) && terraform fmt
+
+tf-lint-check:
+	$(MAKE) tf-local-init
 	cd $(LOCALSTACK_TF_DIR) && terraform fmt -check
 	cd $(LOCALSTACK_TF_DIR) && $(TFLLOCAL) validate
