@@ -1,0 +1,13 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Terraform local artifacts
+.terraform/
+**/.terraform/*
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Localstack volumes
+volume/
