@@ -1,0 +1,22 @@
+---
+name: TF Lint And Validate
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tf-lint-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Run Terraform lint and validate
+        run: make tf-lint
+        env:
+          TFLLOCAL: terraform
