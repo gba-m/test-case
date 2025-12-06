@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OuterEvent",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "target_id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "event_id",
+    "timestamp",
+    "event_type",
+    "message",
+    "owner_id",
+    "target_id"
+  ],
+  "additionalProperties": false
+}

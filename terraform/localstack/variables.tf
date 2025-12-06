@@ -17,8 +17,3 @@ variable "localstack_url" {
   description = "LocalStack service endpoint URL."
   type        = string
 }
-
-variable "main_queue_name" {
-  description = "SQS main queue name."
-  type        = string
-}

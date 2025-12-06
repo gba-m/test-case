@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TransactionPayload",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": "number",
+      "minimum": 0.01
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "USD",
+        "EUR",
+        "BRL"
+      ]
+    }
+  },
+  "required": [
+    "amount",
+    "currency"
+  ],
+  "additionalProperties": false
+}
