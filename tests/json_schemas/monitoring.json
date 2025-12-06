@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MonitoringPayload",
+  "type": "object",
+  "properties": {
+    "error_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "error_rate"
+  ],
+  "additionalProperties": false
+}
