@@ -5,7 +5,6 @@ resource "aws_cloudwatch_event_bus" "source" {
 resource "aws_kinesis_stream" "main" {
   name             = "main-stream"
   shard_count      = 1
-  retention_period = 24
 }
 
 resource "aws_iam_role" "eventbridge_to_kinesis" {
@@ -47,7 +46,6 @@ resource "aws_iam_role_policy" "eventbridge_to_kinesis" {
 
 resource "aws_cloudwatch_event_rule" "forward_to_kinesis" {
   name           = "forward-to-kinesis"
-  description    = "Forward mock-producer events to Kinesis for verification."
   event_bus_name = aws_cloudwatch_event_bus.source.name
 
   event_pattern = jsonencode({
