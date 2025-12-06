@@ -9,6 +9,10 @@ provider "aws" {
   skip_region_validation      = true
 
   endpoints {
-    s3 = var.localstack_url
+    s3      = var.localstack_url
+    events  = var.localstack_url
+    iam     = var.localstack_url
+    kinesis = var.localstack_url
+    sts     = var.localstack_url
   }
 }
