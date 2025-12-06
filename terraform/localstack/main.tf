@@ -3,8 +3,8 @@ resource "aws_cloudwatch_event_bus" "source" {
 }
 
 resource "aws_kinesis_stream" "main" {
-  name             = "main-stream"
-  shard_count      = 1
+  name        = "main-stream"
+  shard_count = 1
 }
 
 resource "aws_iam_role" "eventbridge_to_kinesis" {
