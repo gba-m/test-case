@@ -29,9 +29,6 @@ tf-local-up:
 	$(MAKE) tf-local-plan
 	$(MAKE) tf-local-apply
 
-tf-local-up-test: tf-local-up
-	$(MAKE) integration-test
-
 tf-lint:
 	$(MAKE) tf-local-init
 	cd $(LOCALSTACK_TF_DIR) && terraform fmt
