@@ -18,3 +18,5 @@ jobs:
 
       - name: Run Terraform lint and validate
         run: make tf-lint-check
+        env:
+          TFLOCAL: terraform

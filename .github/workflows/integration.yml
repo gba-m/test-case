@@ -24,3 +24,5 @@ jobs:
 
       - name: Run Integration Test
         run: make setup && make integration-test
+        env:
+          TFLOCAL: terraform

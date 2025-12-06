@@ -5,10 +5,8 @@ LOCALSTACK_TF_VARS ?= tflocal.tfvars
 DOCKER_COMPOSE_CMD := $(shell if command -v docker-compose >/dev/null 2>&1; then echo docker-compose; else echo "docker compose"; fi)
 
 setup:
-	if ! command -v terraform >/dev/null 2>&1; then \
-		brew tap hashicorp/tap; \
-		brew install hashicorp/tap/terraform; \
-	fi
+	brew tap hashicorp/tap || true
+	brew install hashicorp/tap/terraform || true
 	brew install uv || true
 	uv python install 3.12
 	uv venv --python 3.12
